@@ -1,0 +1,33 @@
+test> use mangodbProject(use-to create the new project on the name of mangodbProject)
+switched to db mangodbProject
+mangodbProject> db (db will provide the current project folder)
+mangodbProject
+mangodbProject> db.createCollection('Student') //student collection name
+{ ok: 1 }
+//one entry added to the collection student.It's providing the acknowledgment thath the data had been added
+mangodbProject> db.Student.insert({name:'rithanya',email:'rithanya.eee@gmail.com'})
+DeprecationWarning: Collection.insert() is deprecated. Use insertOne, insertMany, or bulkWrite.
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId('65b4d91f66c70d5d084c1b5b') }
+}
+mangodbProject> db.Student.insert({name:'ritham',email:'rithanyn2004@gmail.com'})
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId('65b4d95f66c70d5d084c1b5c') }
+}
+//to check for the added entries
+mangodbProject> db.Student.find().pretty()
+[
+  {
+    _id: ObjectId('65b4d91f66c70d5d084c1b5b'),
+    name: 'rithanya',
+    email: 'rithanya.eee@gmail.com'
+  },
+  {
+    _id: ObjectId('65b4d95f66c70d5d084c1b5c'),
+    name: 'ritham',
+    email: 'rithanyn2004@gmail.com'
+  }
+]
+//Inorder to view from UI we can view from database
