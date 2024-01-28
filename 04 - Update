@@ -1,0 +1,119 @@
+//Single Entry updating
+DataBase> db.Teacher.update({name:'a'},{$set:{name:'anitha'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+DataBase> db.Teacher.find()
+[
+  {
+    _id: ObjectId('65b5f06696b0a18a820592b0'),
+    name: 'anitha',
+    email: 'xyz@gmail.com'
+  },
+  {
+    _id: ObjectId('65b5f16596b0a18a820592b1'),
+    name: 'b',
+    email: 'abc@gmail.com'
+  },
+  {
+    _id: ObjectId('65b5f16596b0a18a820592b2'),
+    name: 'c',
+    email: 'abc@gmail.com'
+  }
+]
+
+
+//Multiple Entry Updating
+DataBase> db.Teacher.updateMany({email:'abc@gmail.com'},{$set:{email:'a@gmail.com'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+DataBase> db.Teacher.find()
+[
+  {
+    _id: ObjectId('65b5f06696b0a18a820592b0'),
+    name: 'anitha',
+    email: 'xyz@gmail.com'
+  },
+  {
+    _id: ObjectId('65b5f16596b0a18a820592b1'),
+    name: 'b',
+    email: 'a@gmail.com'
+  },
+  {
+    _id: ObjectId('65b5f16596b0a18a820592b2'),
+    name: 'c',
+    email: 'a@gmail.com'
+  }
+]
+
+
+//Updating single new data 
+DataBase> db.Teacher.update({},{$set:{Dept:'eee'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+DataBase> db.Teacher.find()
+[
+  {
+    _id: ObjectId('65b5f06696b0a18a820592b0'),
+    name: 'anitha',
+    email: 'xyz@gmail.com',
+    Dept: 'eee'
+  },
+  {
+    _id: ObjectId('65b5f16596b0a18a820592b1'),
+    name: 'b',
+    email: 'a@gmail.com'
+  },
+  {
+    _id: ObjectId('65b5f16596b0a18a820592b2'),
+    name: 'c',
+    email: 'a@gmail.com'
+  }
+]
+
+
+
+//Updating multiple new data 
+DataBase> db.Teacher.updateMany({},{$set:{Dept:'eee'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+DataBase> db.Teacher.find()
+[
+  {
+    _id: ObjectId('65b5f06696b0a18a820592b0'),
+    name: 'anitha',
+    email: 'xyz@gmail.com',
+    Dept: 'eee'
+  },
+  {
+    _id: ObjectId('65b5f16596b0a18a820592b1'),
+    name: 'b',
+    email: 'a@gmail.com',
+    Dept: 'eee'
+  },
+  {
+    _id: ObjectId('65b5f16596b0a18a820592b2'),
+    name: 'c',
+    email: 'a@gmail.com',
+    Dept: 'eee'
+  }
+]
