@@ -1,0 +1,32 @@
+//Deleting one entry
+DataBase> db.Teacher.deleteOne({name:'b'})
+{ acknowledged: true, deletedCount: 1 }
+DataBase> db.Teacher.find()
+[
+  {
+    _id: ObjectId('65b5f06696b0a18a820592b0'),
+    name: 'anitha',
+    email: 'xyz@gmail.com',
+    Dept: 'eee'
+  },
+  {
+    _id: ObjectId('65b5f16596b0a18a820592b2'),
+    name: 'c',
+    email: 'a@gmail.com',
+    Dept: 'eee'
+  }
+]
+
+
+//Deleting many Entries
+DataBase> db.Teacher.deleteMany({name:'c'})
+{ acknowledged: true, deletedCount: 1 }
+DataBase> db.Teacher.find()
+[
+  {
+    _id: ObjectId('65b5f06696b0a18a820592b0'),
+    name: 'anitha',
+    email: 'xyz@gmail.com',
+    Dept: 'eee'
+  }
+]
