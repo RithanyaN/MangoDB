@@ -1,0 +1,43 @@
+//To insert Single element to the collection Teacher
+DataBase> db.Teacher.insert({name:'a',email:'xyz@gmail.com'})
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId('65b5f06696b0a18a820592b0') }
+}
+DataBase> db.Teacher.find()
+[
+  {
+    _id: ObjectId('65b5f06696b0a18a820592b0'),
+    name: 'a',
+    email: 'xyz@gmail.com'
+  }
+]
+
+
+
+//To insert Many element to the collection Teacher
+DataBase> db.Teacher.insertMany([{name:'b',email:'abc@gmail.com'},{name:'c',email:'abc@gmail.com'}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('65b5f16596b0a18a820592b1'),
+    '1': ObjectId('65b5f16596b0a18a820592b2')
+  }
+}DataBase> db.Teacher.find().pretty()   //pretty-> if there is many entries inorder to align them
+[  
+  {
+    _id: ObjectId('65b5f06696b0a18a820592b0'),
+    name: 'a',
+    email: 'xyz@gmail.com'
+  },
+  {
+    _id: ObjectId('65b5f16596b0a18a820592b1'),
+    name: 'b',
+    email: 'abc@gmail.com'
+  },
+  {
+    _id: ObjectId('65b5f16596b0a18a820592b2'),
+    name: 'c',
+    email: 'abc@gmail.com'
+  }
+]
