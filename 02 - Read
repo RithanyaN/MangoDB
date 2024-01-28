@@ -1,0 +1,42 @@
+mangodbProject> db.Student.find()
+[
+  {
+    _id: ObjectId('65b4d91f66c70d5d084c1b5b'),
+    name: 'rithanya',
+    email: 'rithanya.eee@gmail.com'
+  },
+  {
+    _id: ObjectId('65b4d95f66c70d5d084c1b5c'),
+    name: 'ritham',
+    email: 'rithanyn2004@gmail.com'
+  },
+  {
+    _id: ObjectId('65b5d22196b0a18a820592a5'),
+    name: 'riya',
+    email: 'rithanyan.21eee@kongu.edu'
+  },
+  {
+    _id: ObjectId('65b5d47796b0a18a820592a6'),
+    name: 'anitha',
+    email: 'anithan@gmail.com'
+  },
+  {
+    _id: ObjectId('65b5d47796b0a18a820592a7'),
+    name: 'reenu',
+    email: 'reenu@gmail.com'
+  }
+]
+mangodbProject> db.Student.find({name:'rithanya'})
+[
+  {
+    _id: ObjectId('65b4d91f66c70d5d084c1b5b'),
+    name: 'rithanya',
+    email: 'rithanya.eee@gmail.com'
+  }
+]
+mangodbProject> db.Student.findOne({name:'rithanya'})
+{
+  _id: ObjectId('65b4d91f66c70d5d084c1b5b'),
+  name: 'rithanya',
+  email: 'rithanya.eee@gmail.com'
+}
