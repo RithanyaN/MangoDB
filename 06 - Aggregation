@@ -1,0 +1,8 @@
+DataBase> db.Teacher.aggregate([{$match : {name:{$eq:'anitha'}}}])
+[
+  {
+    _id: ObjectId('65b5f06696b0a18a820592b0'),
+    name: 'anitha',
+    email: 'xyz@gmail.com'
+  }
+]
