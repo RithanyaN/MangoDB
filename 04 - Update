@@ -117,3 +117,22 @@ DataBase> db.Teacher.find()
     Dept: 'eee'
   }
 ]
+
+
+//To remove single data comes under update
+DataBase> db.Teacher.update({name:'anitha'},{$unset:{Dept:'eee'}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+DataBase> db.Teacher.find()
+[
+  {
+    _id: ObjectId('65b5f06696b0a18a820592b0'),
+    name: 'anitha',
+    email: 'xyz@gmail.com'
+  }
+]
