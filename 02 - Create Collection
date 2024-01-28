@@ -1,0 +1,11 @@
+mangodbProject> use DataBase                      //use->use keyword is used to create Project of name DataBase
+switched to db DataBase
+DataBase> db                                     //db will provide the project name
+DataBase
+DataBase> db.createCollection('Student')        //Creating Student Collection
+{ ok: 1 }
+DataBase> db.createCollection('Teacher')       //Creating Teacher Collection
+{ ok: 1 }
+DataBase> show collections                     //Used to see the Collections name
+Student
+Teacher
