@@ -1,9 +1,0 @@
-//CRUD operation:c->create,R->Read,U->Update,D->delete
-mangodbProject> db.Student.insertMany([{name:'anitha',email:'anithan@gmail.com'},{name:'reenu',email:'reenu@gmail.com'}])
-{
-  acknowledged: true,
-  insertedIds: {
-    '0': ObjectId('65b5d47796b0a18a820592a6'),
-    '1': ObjectId('65b5d47796b0a18a820592a7')
-  }
-}
