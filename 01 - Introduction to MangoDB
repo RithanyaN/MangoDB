@@ -1,0 +1,7 @@
+MongoDB is a powerful and highly scalable database, suitable for use on any application's backend
+MangoDB is an NO SQL datbase.
+MangoDB has only concepts: 1) CRUD operation 2) Aggregation
+C-Create
+R-Read
+U-Update
+D-Delete
