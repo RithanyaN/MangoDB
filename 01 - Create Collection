@@ -31,3 +31,5 @@ mangodbProject> db.Student.find().pretty()
   }
 ]
 //Inorder to view from UI we can view from database
+
+
